@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
   }
 .dark{
     background-color: rgb(55, 54, 61);
@@ -10,17 +9,14 @@
 body{
     background-color: rgb(212, 214, 213); 
 }
-
 img{
     width: 180px;
-    height: 150px;
+    height: 180px;
+    transition: width 1s, height 1s, transform 1s;
 }
-
-.media{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
+img:hover{
+    width: 200px;
+    height: 200px;
 
 }
 .write{
@@ -33,7 +29,6 @@ img{
 h1{
     width: 100%;
 }
-
 button{
     height: 50px;
     width: 100px;
@@ -49,17 +44,16 @@ nav{
     justify-content:center;
     align-items: center;
     flex-direction: row;
-    height: 15vh;
-  
- 
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
-
 #logo{
     height: 80px;
     width: 300px;
     padding-left: 10px;
 }
-
 article{
     height: 20vh;
     width:100%;
@@ -71,9 +65,8 @@ article{
     text-align: center;
     font-family:Verdana;
     font-weight: bolder;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: black;}
+    color: black;
+    margin-top: 80px;}
 
 .mini{
     font-size:large;
@@ -84,7 +77,6 @@ article{
     border-radius: 30px;
     width: 70%;
 }
-
 footer{
     background-color:  rgb(65, 65, 150);
     height: 5vh;
@@ -129,6 +121,7 @@ footer{
     border: 2px solid rgb(65, 65, 150);
     border-radius:  0px 30px 30px 0px;
     color: white;
+    flex-wrap: wrap;
 }
 .w{
     grid-area: wo;
@@ -139,7 +132,6 @@ footer{
 .wr{
     grid-area: wr;
 }
-
 section{
     display: grid;
     grid-template-columns:repeat(4,1fr) ;
@@ -153,14 +145,12 @@ section{
     "media media media .";
     row-gap: 10px;
 }
-
 figcaption{
     color: white;
     font-size: 120%;
     font-weight: bolder;
     margin-bottom: 10px;
 }
-
 #bimg{
     width: 60px;
     height: 60px;
@@ -179,6 +169,7 @@ transform: translateX(800%);
     flex-wrap: wrap;
     padding-left: 500px;
     padding-right: 500px;
+    margin-top: 80px;
 }
 h3{
     width: 100%;
@@ -192,4 +183,34 @@ a{
 }
 li{
     margin: 10px;
+}
+@media all and (max-width:1000px){
+    img{
+        width: 50px;
+        height: 50px;
+        transition: none;
+    }
+    img:hover{
+    width:50px;
+    height: 50px;
+    }
+ 
+    
+    body{
+        font-size: smaller;
+    }
+    .media, .world, .write{
+        flex-wrap: nowrap;
+        font-weight: normal;
+        font-size: small;
+        height: 100px;
+    }
+    article{
+        font-size: smaller;
+        font-weight:normal;
+        margin-top: 60px;
+    }
+    .mini{
+        font-size: smaller;
+    }
 }
