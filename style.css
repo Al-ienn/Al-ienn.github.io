@@ -220,7 +220,7 @@ li{
         font-size: small;
     }
 }
-@media screen and (max-width:1200px)and (max-height:1000px){
+@media screen and (max-width:1200px){
     img{
         width: 100px;
         height: 100px;
